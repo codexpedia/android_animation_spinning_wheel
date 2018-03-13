@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SPIN WHEEL</string>
+    <!-- Spin Wheel -->
+    <string name="wheel_title_main">Start the Wheel!</string>
+    <string name="wheel_title_sub">Tap Spin &amp; Go for Fortune!</string>
+    <string name="wheel_title_main_result">CONGRATULATIONS</string>
+    <string name="wheel_title_sub_result">You have won</string>
+</resources>

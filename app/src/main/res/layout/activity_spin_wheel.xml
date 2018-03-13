@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:id="@+id/wheel_layout"
+    android:clipChildren="false">
+
+    <!--
+    *********************************************************************************************************************************************************************************************************************************
+    The header
+    *********************************************************************************************************************************************************************************************************************************
+    -->
+    <ViewFlipper
+        android:id="@+id/vf_header_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_wheel_header_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_wheel_title_welcome_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:text="@string/wheel_title_main" />
+            <TextView
+                android:id="@+id/tv_wheel_title_welcome_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="@string/wheel_title_sub" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_wheel_header_congrat"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_wheel_title_congrat_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:text="@string/wheel_title_main_result" />
+            <TextView
+                android:id="@+id/tv_wheel_title_congrat_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="@string/wheel_title_sub_result" />
+            <TextView
+                android:id="@+id/tv_winning_amount_lg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:text="0"/>
+        </LinearLayout>
+
+    </ViewFlipper>
+
+
+    <!--
+    *********************************************************************************************************************************************************************************************************************************
+    The Wheel
+    *********************************************************************************************************************************************************************************************************************************
+    -->
+    <LinearLayout
+        android:id="@+id/ll_spinwheel"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/vf_header_flipper"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-165dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:clipChildren="false">
+
+            <ImageView
+                android:id="@+id/iv_wheel_image"
+                android:contentDescription="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:maxWidth="400dp"
+                android:maxHeight="400dp"
+                android:padding="0dp"
+                android:layout_margin="0dp"
+                android:src="@drawable/wheel_image" />
+            <TextView
+                android:id="@+id/tv_winning_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="$100"/>
+
+            <Button
+                android:id="@+id/wheel_btn_spin"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle"
+                android:text="Spin"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
